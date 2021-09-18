@@ -9,12 +9,11 @@ package Lab1;
  *
  * @author vuvantu
  */
-public class NoTaxProduct extends Product{
+public class NoTaxProduct extends Product {
 
     @Override
     public double getImproTax() {
-        Double giathue=super.getImproTax();
-        return giathue; 
+        return 0;
     }
     
 }

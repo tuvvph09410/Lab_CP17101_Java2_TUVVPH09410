@@ -11,16 +11,16 @@ import java.util.ArrayList;
  *
  * @author vuvantu
  */
-public class QuanLySanPham implements QLSanPhamInterface,DAOInterface {
+public class QuanLySanPham implements QLSanPhamInterface, DAOInterface {
 
-    private KeyBoard keyBoard ;
+    private KeyBoard keyBoard;
     private ArrayList<Product> list;
     private String name;
     private Double price;
     private int n;
 
     public QuanLySanPham() {
-        this.list=new ArrayList<>();
+        this.list = new ArrayList<>();
     }
 
     public QuanLySanPham(ArrayList<Product> list, String name, Double price, int n) {
@@ -72,7 +72,7 @@ public class QuanLySanPham implements QLSanPhamInterface,DAOInterface {
 
     @Override
     public Product select(int viTri) {
-            return this.list.get(viTri);
+        return this.list.get(viTri);
     }
 
 }

@@ -10,6 +10,8 @@ package Lab1;
  * @author vuvantu
  */
 public interface QLSanPhamInterface {
+
     public void nhap();
+
     public void Xuat();
 }

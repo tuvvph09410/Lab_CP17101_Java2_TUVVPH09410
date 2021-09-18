@@ -20,14 +20,16 @@ public class KeyBoard {
         String stri = s.nextLine();
         return stri;
     }
-    public static Double reDouble(String string){
+
+    public static Double reDouble(String string) {
         System.out.println(string);
-        Double dble=Double.parseDouble(s.nextLine());
+        Double dble = Double.parseDouble(s.nextLine());
         return dble;
     }
-    public static int reInt(String string){
+
+    public static int reInt(String string) {
         System.out.println(string);
-        int i=Integer.parseInt(s.nextLine());
+        int i = Integer.parseInt(s.nextLine());
         return i;
     }
 }

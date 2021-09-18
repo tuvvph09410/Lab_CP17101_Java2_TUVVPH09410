@@ -10,9 +10,10 @@ package Lab1;
  * @author vuvantu
  */
 public class Product {
+
     private String name;
     private double price;
-   
+
     public Product() {
     }
 
@@ -36,13 +37,14 @@ public class Product {
     public void setPrice(double price) {
         this.price = price;
     }
-    public void getInfor(){
-        System.out.printf("\r %-20S %-10s %-10s \n",name,price,getImproTax());
+
+    public void getInfor() {
+        System.out.printf("\r %-20S %-10s %-10s \n", name, price, getImproTax());
     }
-    public double getImproTax(){
-        double thueNhapKhau=this.price * 0.1;
+
+    public double getImproTax() {
+        double thueNhapKhau = this.price * 0.1;
         return thueNhapKhau;
     }
 
- 
 }
