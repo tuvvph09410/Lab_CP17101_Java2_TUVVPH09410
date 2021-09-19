@@ -11,7 +11,7 @@ package Lab1;
  */
 public class MainClassBai1 {
 
-    static KeyBoard keyBoard = new KeyBoard();
+    static KeyBoard keyBoard ;
     static QuanLySanPham quanLySanPham = new QuanLySanPham();
 
     public static void main(String[] args) {

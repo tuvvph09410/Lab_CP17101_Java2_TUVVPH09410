@@ -31,5 +31,6 @@ public class KeyBoard {
         System.out.println(string);
         int i = Integer.parseInt(s.nextLine());
         return i;
+        
     }
 }
