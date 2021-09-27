@@ -89,30 +89,30 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
-                                      <Component id="radioFemale16" min="-2" max="-2" attributes="0"/>
+                                      <Component id="radioFemale" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" attributes="0">
                                               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                                              <Component id="jButton65" min="-2" pref="83" max="-2" attributes="0"/>
+                                              <Component id="btnGreat" min="-2" pref="83" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jButton66" min="-2" max="-2" attributes="0"/>
+                                              <Component id="btnUpdate" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="jButton67" min="-2" max="-2" attributes="0"/>
+                                              <Component id="btnDelete" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jButton68" min="-2" pref="87" max="-2" attributes="0"/>
+                                              <Component id="btnReset" min="-2" pref="87" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="txtFullName16" min="-2" pref="527" max="-2" attributes="0"/>
-                                                  <Component id="cbbCountry16" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
-                                                  <Component id="radioMale16" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="radioSingle16" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="txtFullName" min="-2" pref="527" max="-2" attributes="0"/>
+                                                  <Component id="cbbCountry" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
+                                                  <Component id="radioMale" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="radioSingle" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   <Component id="jScrollPane17" alignment="0" min="-2" pref="527" max="-2" attributes="0"/>
-                                                  <Component id="txtID16" alignment="0" min="-2" pref="527" max="-2" attributes="0"/>
+                                                  <Component id="txtID" alignment="0" min="-2" pref="527" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
@@ -137,28 +137,28 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel113" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtID16" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtID" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel114" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtFullName16" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtFullName" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel115" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="cbbCountry16" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cbbCountry" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel116" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="radioMale16" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="radioFemale16" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radioMale" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radioFemale" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel117" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="radioSingle16" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radioSingle" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -166,10 +166,10 @@
                               <Component id="jScrollPane17" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jButton67" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jButton66" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jButton65" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jButton68" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnDelete" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnUpdate" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnGreat" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnReset" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Component id="jLabel118" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -210,30 +210,39 @@
                 <Property name="text" type="java.lang.String" value="Notes"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton65">
+            <Component class="javax.swing.JButton" name="btnGreat">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Great"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGreatActionPerformed"/>
+              </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton66">
+            <Component class="javax.swing.JButton" name="btnUpdate">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Update"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUpdateActionPerformed"/>
+              </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton67">
+            <Component class="javax.swing.JButton" name="btnDelete">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Delete"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDeleteActionPerformed"/>
+              </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton68">
+            <Component class="javax.swing.JButton" name="btnReset">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Reset"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton68ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnResetActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtID16">
+            <Component class="javax.swing.JTextField" name="txtID">
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtIDActionPerformed"/>
               </Events>
@@ -252,9 +261,9 @@
                 <Property name="text" type="java.lang.String" value="Staff Edition"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtFullName16">
+            <Component class="javax.swing.JTextField" name="txtFullName">
             </Component>
-            <Component class="javax.swing.JComboBox" name="cbbCountry16">
+            <Component class="javax.swing.JComboBox" name="cbbCountry">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="9">
@@ -274,7 +283,7 @@
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JCheckBox" name="radioMale16">
+            <Component class="javax.swing.JCheckBox" name="radioMale">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="buttonGroupGender"/>
@@ -282,7 +291,7 @@
                 <Property name="text" type="java.lang.String" value="Male"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JCheckBox" name="radioFemale16">
+            <Component class="javax.swing.JCheckBox" name="radioFemale">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="buttonGroupGender"/>
@@ -290,7 +299,7 @@
                 <Property name="text" type="java.lang.String" value="Female"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JCheckBox" name="radioSingle16">
+            <Component class="javax.swing.JCheckBox" name="radioSingle">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Single?"/>
               </Properties>
@@ -305,7 +314,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextArea" name="txtNotes16">
+                <Component class="javax.swing.JTextArea" name="txtNotes">
                   <Properties>
                     <Property name="columns" type="int" value="20"/>
                     <Property name="rows" type="int" value="5"/>
@@ -367,9 +376,9 @@
                     </Property>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="5" rowCount="0">
-                        <Column editable="true" title="ID" type="java.lang.String"/>
+                        <Column editable="false" title="ID" type="java.lang.String"/>
                         <Column editable="false" title="FULLNAME" type="java.lang.String"/>
-                        <Column editable="true" title="COUNTRY" type="java.lang.String"/>
+                        <Column editable="false" title="COUNTRY" type="java.lang.String"/>
                         <Column editable="false" title="GENDER" type="java.lang.String"/>
                         <Column editable="false" title="STATUS" type="java.lang.Object"/>
                       </Table>
@@ -407,6 +416,9 @@
                       <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tblStafListMouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -414,6 +426,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Load"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLoadActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnStore">
               <Properties>

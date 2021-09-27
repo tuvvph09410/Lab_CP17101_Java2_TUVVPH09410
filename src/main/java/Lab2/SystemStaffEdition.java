@@ -5,17 +5,27 @@
  */
 package Lab2;
 
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author vuvantu
  */
 public class SystemStaffEdition extends javax.swing.JFrame {
 
+    private StaffEdition_Interface sei;
+
     /**
      * Creates new form SystemStaffEdition
      */
     public SystemStaffEdition() {
         initComponents();
+        this.reSet();
+        this.sei = new StaffEdition();
+        this.showTable();
+
     }
 
     /**
@@ -36,19 +46,19 @@ public class SystemStaffEdition extends javax.swing.JFrame {
         jLabel116 = new javax.swing.JLabel();
         jLabel117 = new javax.swing.JLabel();
         jLabel118 = new javax.swing.JLabel();
-        jButton65 = new javax.swing.JButton();
-        jButton66 = new javax.swing.JButton();
-        jButton67 = new javax.swing.JButton();
-        jButton68 = new javax.swing.JButton();
-        txtID16 = new javax.swing.JTextField();
+        btnGreat = new javax.swing.JButton();
+        btnUpdate = new javax.swing.JButton();
+        btnDelete = new javax.swing.JButton();
+        btnReset = new javax.swing.JButton();
+        txtID = new javax.swing.JTextField();
         jLabel119 = new javax.swing.JLabel();
-        txtFullName16 = new javax.swing.JTextField();
-        cbbCountry16 = new javax.swing.JComboBox<>();
-        radioMale16 = new javax.swing.JCheckBox();
-        radioFemale16 = new javax.swing.JCheckBox();
-        radioSingle16 = new javax.swing.JCheckBox();
+        txtFullName = new javax.swing.JTextField();
+        cbbCountry = new javax.swing.JComboBox<>();
+        radioMale = new javax.swing.JCheckBox();
+        radioFemale = new javax.swing.JCheckBox();
+        radioSingle = new javax.swing.JCheckBox();
         jScrollPane17 = new javax.swing.JScrollPane();
-        txtNotes16 = new javax.swing.JTextArea();
+        txtNotes = new javax.swing.JTextArea();
         jPanel20 = new javax.swing.JPanel();
         jScrollPane18 = new javax.swing.JScrollPane();
         tblStafList = new javax.swing.JTable();
@@ -73,20 +83,35 @@ public class SystemStaffEdition extends javax.swing.JFrame {
 
         jLabel118.setText("Notes");
 
-        jButton65.setText("Great");
-
-        jButton66.setText("Update");
-
-        jButton67.setText("Delete");
-
-        jButton68.setText("Reset");
-        jButton68.addActionListener(new java.awt.event.ActionListener() {
+        btnGreat.setText("Great");
+        btnGreat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton68ActionPerformed(evt);
+                btnGreatActionPerformed(evt);
             }
         });
 
-        txtID16.addActionListener(new java.awt.event.ActionListener() {
+        btnUpdate.setText("Update");
+        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdateActionPerformed(evt);
+            }
+        });
+
+        btnDelete.setText("Delete");
+        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteActionPerformed(evt);
+            }
+        });
+
+        btnReset.setText("Reset");
+        btnReset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnResetActionPerformed(evt);
+            }
+        });
+
+        txtID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtIDActionPerformed(evt);
             }
@@ -97,24 +122,24 @@ public class SystemStaffEdition extends javax.swing.JFrame {
         jLabel119.setForeground(new java.awt.Color(0, 51, 255));
         jLabel119.setText("Staff Edition");
 
-        cbbCountry16.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Viet Nam", "Lao", "Philipin", "Thai Lan", "China", "Japan", "France", "England", "America" }));
+        cbbCountry.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Viet Nam", "Lao", "Philipin", "Thai Lan", "China", "Japan", "France", "England", "America" }));
 
-        buttonGroupGender.add(radioMale16);
-        radioMale16.setText("Male");
+        buttonGroupGender.add(radioMale);
+        radioMale.setText("Male");
 
-        buttonGroupGender.add(radioFemale16);
-        radioFemale16.setText("Female");
+        buttonGroupGender.add(radioFemale);
+        radioFemale.setText("Female");
 
-        radioSingle16.setText("Single?");
-        radioSingle16.addActionListener(new java.awt.event.ActionListener() {
+        radioSingle.setText("Single?");
+        radioSingle.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 radioSingleActionPerformed(evt);
             }
         });
 
-        txtNotes16.setColumns(20);
-        txtNotes16.setRows(5);
-        jScrollPane17.setViewportView(txtNotes16);
+        txtNotes.setColumns(20);
+        txtNotes.setRows(5);
+        jScrollPane17.setViewportView(txtNotes);
 
         javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
         jPanel19.setLayout(jPanel19Layout);
@@ -136,28 +161,28 @@ public class SystemStaffEdition extends javax.swing.JFrame {
                         .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel19Layout.createSequentialGroup()
                                 .addGap(79, 79, 79)
-                                .addComponent(radioFemale16)
+                                .addComponent(radioFemale)
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(jPanel19Layout.createSequentialGroup()
                                 .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel19Layout.createSequentialGroup()
                                         .addGap(30, 30, 30)
-                                        .addComponent(jButton65, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(btnGreat, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jButton66)
+                                        .addComponent(btnUpdate)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jButton67)
+                                        .addComponent(btnDelete)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jButton68, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(btnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel19Layout.createSequentialGroup()
                                         .addGap(18, 18, 18)
                                         .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(txtFullName16, javax.swing.GroupLayout.PREFERRED_SIZE, 527, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(cbbCountry16, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(radioMale16)
-                                            .addComponent(radioSingle16)
+                                            .addComponent(txtFullName, javax.swing.GroupLayout.PREFERRED_SIZE, 527, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(cbbCountry, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(radioMale)
+                                            .addComponent(radioSingle)
                                             .addComponent(jScrollPane17, javax.swing.GroupLayout.PREFERRED_SIZE, 527, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(txtID16, javax.swing.GroupLayout.PREFERRED_SIZE, 527, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                            .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, 527, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                 .addContainerGap(41, Short.MAX_VALUE))))))
             .addGroup(jPanel19Layout.createSequentialGroup()
                 .addGap(111, 111, 111)
@@ -172,34 +197,34 @@ public class SystemStaffEdition extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel113)
-                    .addComponent(txtID16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(22, 22, 22)
                 .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel114)
-                    .addComponent(txtFullName16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtFullName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(21, 21, 21)
                 .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel115)
-                    .addComponent(cbbCountry16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cbbCountry, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(20, 20, 20)
                 .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel116)
-                    .addComponent(radioMale16)
-                    .addComponent(radioFemale16))
+                    .addComponent(radioMale)
+                    .addComponent(radioFemale))
                 .addGap(29, 29, 29)
                 .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel117)
-                    .addComponent(radioSingle16))
+                    .addComponent(radioSingle))
                 .addGap(23, 23, 23)
                 .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel19Layout.createSequentialGroup()
                         .addComponent(jScrollPane17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton67)
-                            .addComponent(jButton66)
-                            .addComponent(jButton65)
-                            .addComponent(jButton68)))
+                            .addComponent(btnDelete)
+                            .addComponent(btnUpdate)
+                            .addComponent(btnGreat)
+                            .addComponent(btnReset)))
                     .addComponent(jLabel118))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -219,7 +244,7 @@ public class SystemStaffEdition extends javax.swing.JFrame {
                 java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                true, false, true, false, false
+                false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -230,9 +255,19 @@ public class SystemStaffEdition extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        tblStafList.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblStafListMouseClicked(evt);
+            }
+        });
         jScrollPane18.setViewportView(tblStafList);
 
         btnLoad.setText("Load");
+        btnLoad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLoadActionPerformed(evt);
+            }
+        });
 
         btnStore.setText("Store");
 
@@ -316,11 +351,153 @@ public class SystemStaffEdition extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtIDActionPerformed
 
-    private void jButton68ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton68ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton68ActionPerformed
+    private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
+        this.reSet();        // TODO add your handling code here:
+    }//GEN-LAST:event_btnResetActionPerformed
 
-    
+    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+        // TODO add your handling code here:
+        int row = this.tblStafList.getSelectedRow();
+        if (row == -1) {
+            return;
+        }
+        int confirm = JOptionPane.showConfirmDialog(this, "Do you want to delete this record?");
+        System.out.println(confirm);
+        if (confirm == JOptionPane.YES_OPTION) {
+            this.sei.delete(row);
+            JOptionPane.showMessageDialog(this,"Deleted successfully!");
+            this.showTable();
+        } else if (confirm == JOptionPane.NO_OPTION) {
+
+        } else if (confirm == JOptionPane.CANCEL_OPTION) {
+
+        }
+
+
+    }//GEN-LAST:event_btnDeleteActionPerformed
+
+    private void btnGreatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGreatActionPerformed
+        // TODO add your handling code here:
+        String iD = this.txtID.getText();
+        String fullName = this.txtFullName.getText();
+        String country = this.cbbCountry.getSelectedItem().toString();
+        String gender = "";
+        if (this.radioMale.isSelected() == true) {
+            gender = "Male";
+        } else {
+            gender = "Female";
+        }
+        String single = "";
+        if (this.radioSingle.isSelected() == true) {
+            single = "Single";
+        } else {
+            single = "Married";
+        }
+        String notes = this.txtNotes.getText();
+        Staff staff = new Staff(iD, fullName, country, gender, single, notes);
+        this.sei.add(staff);
+        JOptionPane.showMessageDialog(this, "Greated successfully!");
+    }//GEN-LAST:event_btnGreatActionPerformed
+
+    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+        // TODO add your handling code here:
+        int row = this.tblStafList.getSelectedRow();
+        if (row == -1) {
+            return;
+        }
+
+        String iD = this.txtID.getText();
+        String fullName = this.txtFullName.getText();
+        String country = this.cbbCountry.getSelectedItem().toString();
+        String gender = "";
+        if (this.radioMale.isSelected() == true) {
+            gender = "Male";
+        } else {
+            gender = "Female";
+        }
+        String single = "";
+        if (this.radioSingle.isSelected() == true) {
+            single = "Single";
+        } else {
+            single = "Married";
+        }
+        String notes = this.txtNotes.getText();
+        Staff staff = new Staff(iD, fullName, country, gender, single, notes);
+        this.sei.update(row, staff);
+        JOptionPane.showMessageDialog(this, "Updated successfully! ");
+    }//GEN-LAST:event_btnUpdateActionPerformed
+
+    private void btnLoadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoadActionPerformed
+        // TODO add your handling code here:
+        this.showTable();
+        JOptionPane.showMessageDialog(this, "Loaded Table successfully! ");
+    }//GEN-LAST:event_btnLoadActionPerformed
+
+    private void tblStafListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblStafListMouseClicked
+        // TODO add your handling code here:
+        int row = this.tblStafList.getSelectedRow();
+
+        if (row == -1) {
+            return;
+        }
+        String iD = this.tblStafList.getValueAt(row, 0).toString();
+        String fullName = this.tblStafList.getValueAt(row, 1).toString();
+        String country = this.tblStafList.getValueAt(row, 2).toString();
+        String gender = this.tblStafList.getValueAt(row, 3).toString();
+        String status = this.tblStafList.getValueAt(row, 4).toString();
+
+        this.txtID.setText(iD);
+        this.txtFullName.setText(fullName);
+        if (gender.equals("Male")) {
+            this.radioMale.setSelected(true);
+        } else {
+            this.radioFemale.setSelected(true);
+        }
+        if (status.equals("Single")) {
+            this.radioSingle.setSelected(true);
+        } else {
+            this.radioSingle.setSelected(false);
+        }
+        this.cbbCountry.setSelectedItem(country);
+        ArrayList<Staff> arrayListStaff = this.sei.getArrayList();
+
+        for (int i = 0; i < arrayListStaff.size(); i++) {
+            Staff staff = arrayListStaff.get(i);
+            if (staff.getStaffID().equals(iD)) {
+                this.txtNotes.setText(staff.getNotes());
+            }
+        }
+
+
+    }//GEN-LAST:event_tblStafListMouseClicked
+
+    public void showTable() {
+        DefaultTableModel DTM = (DefaultTableModel) this.tblStafList.getModel();
+
+        DTM.setRowCount(0);
+
+        ArrayList<Staff> arrayListStaff = this.sei.getArrayList();
+        for (int i = 0; i < arrayListStaff.size(); i++) {
+            Staff staff = (Staff) arrayListStaff.get(i);
+            Object[] row = new Object[]{
+                staff.getStaffID(),
+                staff.getFullName(),
+                staff.getCountry(),
+                staff.getGender(),
+                staff.getStatus(),};
+            DTM.addRow(row);
+        }
+    }
+
+    public void reSet() {
+        this.txtID.setText("");
+        this.txtFullName.setText("");
+        this.cbbCountry.setSelectedIndex(0);
+        this.radioMale.setSelected(true);
+        this.radioSingle.setSelected(true);
+        this.txtNotes.setText("");
+    }
+
     /**
      * @param args the command line arguments
      */
@@ -357,14 +534,14 @@ public class SystemStaffEdition extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnDelete;
+    private javax.swing.JButton btnGreat;
     private javax.swing.JButton btnLoad;
+    private javax.swing.JButton btnReset;
     private javax.swing.JButton btnStore;
+    private javax.swing.JButton btnUpdate;
     private javax.swing.ButtonGroup buttonGroupGender;
-    private javax.swing.JComboBox<String> cbbCountry16;
-    private javax.swing.JButton jButton65;
-    private javax.swing.JButton jButton66;
-    private javax.swing.JButton jButton67;
-    private javax.swing.JButton jButton68;
+    private javax.swing.JComboBox<String> cbbCountry;
     private javax.swing.JLabel jLabel113;
     private javax.swing.JLabel jLabel114;
     private javax.swing.JLabel jLabel115;
@@ -379,12 +556,12 @@ public class SystemStaffEdition extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane17;
     private javax.swing.JScrollPane jScrollPane18;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JCheckBox radioFemale16;
-    private javax.swing.JCheckBox radioMale16;
-    private javax.swing.JCheckBox radioSingle16;
+    private javax.swing.JCheckBox radioFemale;
+    private javax.swing.JCheckBox radioMale;
+    private javax.swing.JCheckBox radioSingle;
     private javax.swing.JTable tblStafList;
-    private javax.swing.JTextField txtFullName16;
-    private javax.swing.JTextField txtID16;
-    private javax.swing.JTextArea txtNotes16;
+    private javax.swing.JTextField txtFullName;
+    private javax.swing.JTextField txtID;
+    private javax.swing.JTextArea txtNotes;
     // End of variables declaration//GEN-END:variables
 }
