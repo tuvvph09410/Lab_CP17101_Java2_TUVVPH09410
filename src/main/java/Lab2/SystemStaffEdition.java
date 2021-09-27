@@ -54,11 +54,11 @@ public class SystemStaffEdition extends javax.swing.JFrame {
         jLabel119 = new javax.swing.JLabel();
         txtFullName = new javax.swing.JTextField();
         cbbCountry = new javax.swing.JComboBox<>();
-        radioMale = new javax.swing.JCheckBox();
-        radioFemale = new javax.swing.JCheckBox();
-        radioSingle = new javax.swing.JCheckBox();
+        cbSingle = new javax.swing.JCheckBox();
         jScrollPane17 = new javax.swing.JScrollPane();
         txtNotes = new javax.swing.JTextArea();
+        radioMale = new javax.swing.JRadioButton();
+        radioFemale = new javax.swing.JRadioButton();
         jPanel20 = new javax.swing.JPanel();
         jScrollPane18 = new javax.swing.JScrollPane();
         tblStafList = new javax.swing.JTable();
@@ -124,22 +124,22 @@ public class SystemStaffEdition extends javax.swing.JFrame {
 
         cbbCountry.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Viet Nam", "Lao", "Philipin", "Thai Lan", "China", "Japan", "France", "England", "America" }));
 
-        buttonGroupGender.add(radioMale);
-        radioMale.setText("Male");
-
-        buttonGroupGender.add(radioFemale);
-        radioFemale.setText("Female");
-
-        radioSingle.setText("Single?");
-        radioSingle.addActionListener(new java.awt.event.ActionListener() {
+        cbSingle.setText("Single?");
+        cbSingle.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                radioSingleActionPerformed(evt);
+                cbSingleActionPerformed(evt);
             }
         });
 
         txtNotes.setColumns(20);
         txtNotes.setRows(5);
         jScrollPane17.setViewportView(txtNotes);
+
+        buttonGroupGender.add(radioMale);
+        radioMale.setText("Male");
+
+        buttonGroupGender.add(radioFemale);
+        radioFemale.setText("Female");
 
         javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
         jPanel19.setLayout(jPanel19Layout);
@@ -160,30 +160,27 @@ public class SystemStaffEdition extends javax.swing.JFrame {
                             .addComponent(jLabel117))
                         .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel19Layout.createSequentialGroup()
-                                .addGap(79, 79, 79)
-                                .addComponent(radioFemale)
-                                .addGap(0, 0, Short.MAX_VALUE))
+                                .addGap(30, 30, 30)
+                                .addComponent(btnGreat, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnUpdate)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnDelete)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel19Layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
                                 .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtFullName, javax.swing.GroupLayout.PREFERRED_SIZE, 527, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cbbCountry, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cbSingle)
+                                    .addComponent(jScrollPane17, javax.swing.GroupLayout.PREFERRED_SIZE, 527, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, 527, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(jPanel19Layout.createSequentialGroup()
-                                        .addGap(30, 30, 30)
-                                        .addComponent(btnGreat, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(radioMale)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btnUpdate)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(btnDelete)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel19Layout.createSequentialGroup()
-                                        .addGap(18, 18, 18)
-                                        .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(txtFullName, javax.swing.GroupLayout.PREFERRED_SIZE, 527, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(cbbCountry, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(radioMale)
-                                            .addComponent(radioSingle)
-                                            .addComponent(jScrollPane17, javax.swing.GroupLayout.PREFERRED_SIZE, 527, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, 527, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                .addContainerGap(41, Short.MAX_VALUE))))))
+                                        .addComponent(radioFemale)))))
+                        .addContainerGap(41, Short.MAX_VALUE))))
             .addGroup(jPanel19Layout.createSequentialGroup()
                 .addGap(111, 111, 111)
                 .addComponent(jLabel119)
@@ -211,10 +208,10 @@ public class SystemStaffEdition extends javax.swing.JFrame {
                     .addComponent(jLabel116)
                     .addComponent(radioMale)
                     .addComponent(radioFemale))
-                .addGap(29, 29, 29)
+                .addGap(21, 21, 21)
                 .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel117)
-                    .addComponent(radioSingle))
+                    .addComponent(cbSingle))
                 .addGap(23, 23, 23)
                 .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel19Layout.createSequentialGroup()
@@ -226,7 +223,7 @@ public class SystemStaffEdition extends javax.swing.JFrame {
                             .addComponent(btnGreat)
                             .addComponent(btnReset)))
                     .addComponent(jLabel118))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("EDITION", jPanel19);
@@ -343,9 +340,9 @@ public class SystemStaffEdition extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void radioSingleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioSingleActionPerformed
+    private void cbSingleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbSingleActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_radioSingleActionPerformed
+    }//GEN-LAST:event_cbSingleActionPerformed
 
     private void txtIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIDActionPerformed
         // TODO add your handling code here:
@@ -388,7 +385,7 @@ public class SystemStaffEdition extends javax.swing.JFrame {
             gender = "Female";
         }
         String single = "";
-        if (this.radioSingle.isSelected() == true) {
+        if (this.cbSingle.isSelected() == true) {
             single = "Single";
         } else {
             single = "Married";
@@ -416,7 +413,7 @@ public class SystemStaffEdition extends javax.swing.JFrame {
             gender = "Female";
         }
         String single = "";
-        if (this.radioSingle.isSelected() == true) {
+        if (this.cbSingle.isSelected() == true) {
             single = "Single";
         } else {
             single = "Married";
@@ -454,9 +451,9 @@ public class SystemStaffEdition extends javax.swing.JFrame {
             this.radioFemale.setSelected(true);
         }
         if (status.equals("Single")) {
-            this.radioSingle.setSelected(true);
+            this.cbSingle.setSelected(true);
         } else {
-            this.radioSingle.setSelected(false);
+            this.cbSingle.setSelected(false);
         }
         this.cbbCountry.setSelectedItem(country);
         ArrayList<Staff> arrayListStaff = this.sei.getArrayList();
@@ -494,7 +491,7 @@ public class SystemStaffEdition extends javax.swing.JFrame {
         this.txtFullName.setText("");
         this.cbbCountry.setSelectedIndex(0);
         this.radioMale.setSelected(true);
-        this.radioSingle.setSelected(true);
+        this.cbSingle.setSelected(true);
         this.txtNotes.setText("");
     }
 
@@ -541,6 +538,7 @@ public class SystemStaffEdition extends javax.swing.JFrame {
     private javax.swing.JButton btnStore;
     private javax.swing.JButton btnUpdate;
     private javax.swing.ButtonGroup buttonGroupGender;
+    private javax.swing.JCheckBox cbSingle;
     private javax.swing.JComboBox<String> cbbCountry;
     private javax.swing.JLabel jLabel113;
     private javax.swing.JLabel jLabel114;
@@ -556,9 +554,8 @@ public class SystemStaffEdition extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane17;
     private javax.swing.JScrollPane jScrollPane18;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JCheckBox radioFemale;
-    private javax.swing.JCheckBox radioMale;
-    private javax.swing.JCheckBox radioSingle;
+    private javax.swing.JRadioButton radioFemale;
+    private javax.swing.JRadioButton radioMale;
     private javax.swing.JTable tblStafList;
     private javax.swing.JTextField txtFullName;
     private javax.swing.JTextField txtID;
