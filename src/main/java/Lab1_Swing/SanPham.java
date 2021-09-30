@@ -59,6 +59,11 @@ public class SanPham {
     }
 
     public Double getTongTien() {
-        return this.giaSP * this.slSP;
+        return this.giaSP * this.slSP + this.getThue();
+    }
+
+    public Double getThue() {
+        double thue = this.giaSP * 0.1;
+        return thue;
     }
 }

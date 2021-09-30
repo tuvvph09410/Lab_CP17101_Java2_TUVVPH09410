@@ -6,6 +6,7 @@
 package Lab2;
 
 import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -362,7 +363,7 @@ public class SystemStaffEdition extends javax.swing.JFrame {
         System.out.println(confirm);
         if (confirm == JOptionPane.YES_OPTION) {
             this.sei.delete(row);
-            JOptionPane.showMessageDialog(this,"Deleted successfully!");
+            JOptionPane.showMessageDialog(this, "Deleted successfully!");
             this.showTable();
         } else if (confirm == JOptionPane.NO_OPTION) {
 
@@ -391,9 +392,30 @@ public class SystemStaffEdition extends javax.swing.JFrame {
             single = "Married";
         }
         String notes = this.txtNotes.getText();
-        Staff staff = new Staff(iD, fullName, country, gender, single, notes);
-        this.sei.add(staff);
-        JOptionPane.showMessageDialog(this, "Greated successfully!");
+
+        if (iD.length() != 0 || fullName.length() != 0) {
+            List<Staff> listStaff = sei.getArrayList();
+            Staff staff = null;
+
+            for (int i = 0; i < listStaff.size(); i++) {
+                staff = listStaff.get(i);
+            }
+
+            if (listStaff.isEmpty() == true || !staff.getStaffID().equals(iD)) {
+                staff = new Staff(iD, fullName, country, gender, single, notes);
+                this.sei.add(staff);
+                JOptionPane.showMessageDialog(this, "Greated successfully!");
+            } else {
+                
+                JOptionPane.showMessageDialog(this, "Your staff id has been duplicated and cannot be added!");
+                
+            }
+
+        } else {
+            JOptionPane.showMessageDialog(this, "you have not entered anything!");
+        }
+
+
     }//GEN-LAST:event_btnGreatActionPerformed
 
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed

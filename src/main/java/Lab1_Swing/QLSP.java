@@ -215,14 +215,14 @@ public class QLSP extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Tên Sản Phẩm", "Loại", "Giá", "Số Lượng", "Tổng Tiền"
+                "Tên Sản Phẩm", "Loại", "Giá", "Số Lượng", "Thuế", "Tổng Tiền"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Integer.class, java.lang.Double.class
+                java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Integer.class, java.lang.Double.class, java.lang.Double.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -414,6 +414,7 @@ public class QLSP extends javax.swing.JFrame {
                 sanPham.getLoaiSP(),
                 sanPham.getGiaSP(),
                 sanPham.getSlSP(),
+                sanPham.getThue(),
                 sanPham.getTongTien(),};
             dtm.addRow(row);
         }

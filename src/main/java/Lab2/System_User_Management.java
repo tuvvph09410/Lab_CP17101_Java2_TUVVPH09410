@@ -6,6 +6,7 @@
 package Lab2;
 
 import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -267,12 +268,30 @@ public class System_User_Management extends javax.swing.JFrame {
         } else {
             role = "User";
         }
+         
+        if (userName.length() != 0 && passWord.length() != 0) {
+            
+            List<Account> listAccount = umi.getArrayList();
+            Account account = null;
 
-        Account account = new Account(userName, passWord, role);
-        this.umi.add(account);
-        JOptionPane.showMessageDialog(this, "Added successfully!");
-        this.reSet();
-        this.showTable();
+            for (int i = 0; i < listAccount.size(); i++) {
+                account = listAccount.get(i);
+            }
+
+            if (listAccount.isEmpty() == true || !account.getUserName().equals(userName)) {
+                account = new Account(userName, passWord, role);
+                this.umi.add(account);
+                JOptionPane.showMessageDialog(this, "Added successfully!");
+                this.reSet();
+                this.showTable();
+
+            } else {
+                JOptionPane.showMessageDialog(this, "you entered the same username and please enter a different username!");
+
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "You have not entered anything and please enter ?");
+        }
     }//GEN-LAST:event_btnAddActionPerformed
 
     private void tblUserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblUserMouseClicked
