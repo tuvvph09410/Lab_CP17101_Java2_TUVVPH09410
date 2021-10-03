@@ -259,11 +259,12 @@ public class StudentManager_System extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addComponent(cbBonus)
                 .addGap(20, 20, 20)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnDelete)
-                    .addComponent(btnUpdate)
-                    .addComponent(btnReset)
-                    .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnAdd, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnDelete)
+                        .addComponent(btnUpdate)
+                        .addComponent(btnReset)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(8, 8, 8)
@@ -372,6 +373,7 @@ public class StudentManager_System extends javax.swing.JFrame {
         // TODO add your handling code here:
         int row = this.tblStudent.getSelectedRow();
         if (row == -1) {
+            JOptionPane.showMessageDialog(this, "You have no selected below table to delete!");
             return;
         }
         int confirm = JOptionPane.showConfirmDialog(this, "Do you want to delete this record?");
@@ -424,40 +426,16 @@ public class StudentManager_System extends javax.swing.JFrame {
 
     private void btnArrangeNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnArrangeNameActionPerformed
         // TODO add your handling code here:
-        this.arrangeName();
+        this.smi.arrangeName();
         this.showTable();
-        
     }//GEN-LAST:event_btnArrangeNameActionPerformed
 
     private void btnArrangePointsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnArrangePointsActionPerformed
         // TODO add your handling code here:
-        this.arrangePoints();
+        this.smi.arrangePoints();
         this.showTable();
     }//GEN-LAST:event_btnArrangePointsActionPerformed
-    public void arrangePoints() {
-        Comparator<Student> comparator = new Comparator<Student>() {
-            @Override
-            public int compare(Student o1, Student o2) {
-                Double d1 = o1.getPoints();
-                Double d2 = o2.getPoints();
-                return d1.compareTo(d2);
-            }
-            
-        };
-        Collections.sort(this.smi.getList(), comparator);
-    }
-
-    public void arrangeName() {
-        Comparator<Student> comparator = new Comparator<Student>() {
-            @Override
-            public int compare(Student o1, Student o2) {
-                return o1.getName().compareTo(o2.getName());
-            }
-            
-        };
-        Collections.sort(this.smi.getList(), comparator);
-    }
-
+   
     public void showTable() {
         DefaultTableModel dtm = (DefaultTableModel) this.tblStudent.getModel();
         

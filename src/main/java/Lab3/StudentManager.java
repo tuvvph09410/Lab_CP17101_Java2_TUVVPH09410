@@ -6,6 +6,8 @@
 package Lab3;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -52,6 +54,32 @@ public class StudentManager implements StudentManager_Interface {
     @Override
     public List<Student> getList() {
         return this.listStudent;
+    }
+
+    @Override
+    public void arrangePoints() {
+        Comparator<Student> comparator = new Comparator<Student>() {
+            @Override
+            public int compare(Student o1, Student o2) {
+                Double d1 = o1.getPoints();
+                Double d2 = o2.getPoints();
+                return d1.compareTo(d2);
+            }
+
+        };
+        Collections.sort(getList(), comparator);
+    }
+
+    @Override
+    public void arrangeName() {
+        Comparator<Student> comparator = new Comparator<Student>() {
+            @Override
+            public int compare(Student o1, Student o2) {
+                return o1.getName().compareTo(o2.getName());
+            }
+
+        };
+        Collections.sort(getList(), comparator);
     }
 
 }

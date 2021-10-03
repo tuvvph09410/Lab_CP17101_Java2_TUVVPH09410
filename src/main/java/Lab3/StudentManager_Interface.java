@@ -24,4 +24,8 @@ public interface StudentManager_Interface {
     public Student get(int position);
 
     public List<Student> getList();
+    
+    public void arrangePoints();
+    
+    public void arrangeName();
 }
